@@ -11,11 +11,23 @@ optionTwo.textContent = '2';
 optionThree.textContent = '3';
 
 optionOne.onclick = () => {
-    output.append((total += Number(optionOne.textContent)) + ", ");
+    const div = document.createElement('div');
+    div.className = 'user-output';
+    div.textContent = (total += Number(optionOne.textContent));
+
+    output.append(div);
 };
 optionTwo.onclick = () => {
-    output.append((total += Number(optionTwo.textContent)) + ", ");
+    const div = document.createElement('div');
+    div.className = 'user-output';
+    div.textContent = (total += Number(optionTwo.textContent));
+
+    output.append(div);
 };
 optionThree.onclick = () => {
-    output.append((total += Number(optionThree.textContent)) + ", ");
+    const div = document.createElement('div');
+    div.className = 'user-output';
+    div.textContent = (total += Number(optionThree.textContent));
+
+    output.append(div);
 };
