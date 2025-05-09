@@ -10,24 +10,14 @@ optionOne.textContent = '1';
 optionTwo.textContent = '2';
 optionThree.textContent = '3';
 
-optionOne.onclick = () => {
-    const div = document.createElement('div');
-    div.className = 'user-output';
-    div.textContent = (total += Number(optionOne.textContent));
+const optionButtons = document.querySelectorAll('.option-button');
 
-    output.append(div);
-};
-optionTwo.onclick = () => {
-    const div = document.createElement('div');
-    div.className = 'user-output';
-    div.textContent = (total += Number(optionTwo.textContent));
+optionButtons.forEach(button => {
+    button.onclick = () => {
+        const div = document.createElement('div');
+        div.className = 'user-output';
+        div.textContent = (total += Number(button.textContent));
 
-    output.append(div);
-};
-optionThree.onclick = () => {
-    const div = document.createElement('div');
-    div.className = 'user-output';
-    div.textContent = (total += Number(optionThree.textContent));
-
-    output.append(div);
-};
+        output.append(div);
+    };
+});
