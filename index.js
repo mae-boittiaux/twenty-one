@@ -7,10 +7,7 @@ setOptionButtonText();
 
 optionButtons.forEach(button => {
     button.onclick = () => {
-        const div = document.createElement('div');
-        div.className = 'user-output';
-        div.textContent = (total += Number(button.textContent));
-
+        const div = createDiv('user-output', (total += Number(button.textContent)));
         output.append(div);
     };
 });
@@ -23,4 +20,13 @@ function setOptionButtonText() {
     optionOne.textContent = '1';
     optionTwo.textContent = '2';
     optionThree.textContent = '3';
+}
+
+function createDiv(className, textContent) {
+    const div = document.createElement('div');
+
+    div.className = className;
+    div.textContent = textContent;
+
+    return div;
 }
