@@ -1,16 +1,9 @@
-const optionOne = document.getElementById('option-one');
-const optionTwo = document.getElementById('option-two');
-const optionThree = document.getElementById('option-three');
-
 const output = document.getElementById('output');
+const optionButtons = document.querySelectorAll('.option-button');
 
 let total = 0;
 
-optionOne.textContent = '1';
-optionTwo.textContent = '2';
-optionThree.textContent = '3';
-
-const optionButtons = document.querySelectorAll('.option-button');
+setOptionButtonText();
 
 optionButtons.forEach(button => {
     button.onclick = () => {
@@ -21,3 +14,13 @@ optionButtons.forEach(button => {
         output.append(div);
     };
 });
+
+function setOptionButtonText() {
+    const optionOne = document.getElementById('option-one');
+    const optionTwo = document.getElementById('option-two');
+    const optionThree = document.getElementById('option-three');
+
+    optionOne.textContent = '1';
+    optionTwo.textContent = '2';
+    optionThree.textContent = '3';
+}
