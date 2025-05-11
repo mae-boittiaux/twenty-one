@@ -1,0 +1,67 @@
+:root {
+    /* colours */
+    --white: #f8f8f2;
+    --orange: #f2843e;
+    --purple: #bd76ad;
+    --dark-blue: #191a21;
+
+    /* margin */
+    --margin-top: 6px;
+
+    /* font-sizes */
+    --font-large: 42px;
+    --font-normal: 16px;
+
+    /* padding */
+    --padding: 8px 14px;
+
+    /* border */
+    --border-radius: 20px;
+    --border-radius-small: 4px;
+
+    /* font-family */
+    --font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: var(--white);
+    align-items: center;
+    flex-direction: column;
+    font-size: var(--font-normal);
+    font-family: var(--font-family);
+    background-color: var(--dark-blue);
+}
+
+.user-output {
+    width: 20px;
+    text-align: center;
+    margin-left: 200px;
+    color: var(--dark-blue);
+    padding: var(--padding);
+    margin-top: var(--margin-top);
+    background-color: var(--orange);
+    border-radius: var(--border-radius);
+}
+
+.computer-output {
+    width: 20px;
+    text-align: center;
+    color: var(--white);
+    padding: var(--padding);
+    margin-top: var(--margin-top);
+    background-color: var(--purple);
+    border-radius: var(--border-radius);
+}
+
+.option-button {
+    width: 30px;
+    height: 30px;
+    color: var(--dark-blue);
+    font-size: var(--font-normal);
+    background-color: var(--white);
+    font-family: var(--font-family);
+    border-radius: var(--border-radius-small);
+}
