@@ -9,6 +9,9 @@ optionButtons.forEach(button => {
     button.onclick = () => {
         const div = createDiv('user-output', (total += Number(button.textContent)));
         output.append(div);
+
+        const computerResponse = createDiv('computer-output', (total += getRandomInteger(1, 4)));
+        output.append(computerResponse);
     };
 });
 
@@ -29,4 +32,8 @@ function createDiv(className, textContent) {
     div.textContent = textContent;
 
     return div;
+}
+
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
