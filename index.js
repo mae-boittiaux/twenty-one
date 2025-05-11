@@ -7,11 +7,12 @@ setOptionButtonText();
 
 optionButtons.forEach(button => {
     button.onclick = () => {
-        const div = createDiv('user-output', (total += Number(button.textContent)));
+        const div = createDiv('user-output', (total += (Number(button.textContent) - total)));
         output.append(div);
 
         const computerResponse = createDiv('computer-output', (total += getRandomInteger(1, 4)));
         output.append(computerResponse);
+        setOptionButtonText();
     };
 });
 
@@ -20,9 +21,9 @@ function setOptionButtonText() {
     const optionTwo = document.getElementById('option-two');
     const optionThree = document.getElementById('option-three');
 
-    optionOne.textContent = '1';
-    optionTwo.textContent = '2';
-    optionThree.textContent = '3';
+    optionOne.textContent = (total + 1);
+    optionTwo.textContent = (total + 2);
+    optionThree.textContent = (total + 3);
 }
 
 function createDiv(className, textContent) {
