@@ -57,6 +57,7 @@ body {
 }
 
 .option-button {
+    border: 0;
     width: 30px;
     height: 30px;
     color: var(--dark-blue);
@@ -64,4 +65,10 @@ body {
     background-color: var(--white);
     font-family: var(--font-family);
     border-radius: var(--border-radius-small);
+}
+
+.hidden {
+    border: 0;
+    color: var(--dark-blue);
+    background-color: var(--dark-blue);
 }

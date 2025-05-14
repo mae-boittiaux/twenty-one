@@ -1,4 +1,9 @@
 const output = document.getElementById('output');
+
+const optionOne = document.getElementById('option-one');
+const optionTwo = document.getElementById('option-two');
+const optionThree = document.getElementById('option-three');
+
 const optionButtons = document.querySelectorAll('.option-button');
 
 let total = 0;
@@ -19,14 +24,11 @@ optionButtons.forEach(button => {
         determineResult(choiceComputer, false);
 
         setOptionButtonText();
+        determineButtonVisibility();
     };
 });
 
 function setOptionButtonText() {
-    const optionOne = document.getElementById('option-one');
-    const optionTwo = document.getElementById('option-two');
-    const optionThree = document.getElementById('option-three');
-
     optionOne.textContent = (total + 1);
     optionTwo.textContent = (total + 2);
     optionThree.textContent = (total + 3);
@@ -62,4 +64,10 @@ function determineResult(choice, isUserTurn) {
             playTurn(outputComputer, 'You win');
         }
     }
+}
+
+function determineButtonVisibility() {
+    optionButtons.forEach(button => {
+        if (button.textContent > 21) { button.classList.add('hidden'); }
+    });
 }
