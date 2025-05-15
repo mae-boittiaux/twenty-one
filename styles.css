@@ -36,7 +36,7 @@ body {
 }
 
 .user-output {
-    width: 20px;
+    width: fit-content;
     text-align: center;
     margin-left: 200px;
     color: var(--dark-blue);
@@ -47,7 +47,7 @@ body {
 }
 
 .computer-output {
-    width: 20px;
+    width: fit-content;
     text-align: center;
     color: var(--white);
     padding: var(--padding);
