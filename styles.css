@@ -4,7 +4,8 @@
     --orange: #f2843e;
     --purple: #bd76ad;
     --dark-blue: #191a21;
-    --medium-blue: #6272a4;
+    --light-blue: #6272a4;
+    --medium-blue: #4b5575;
 
     /* margin */
     --margin-top: 6px;
@@ -58,6 +59,7 @@ body {
 }
 
 .option-buttons {
+    cursor: default;
     position: fixed;
     margin-top: 460px;
     margin-left: 130px;
@@ -69,13 +71,21 @@ body {
     height: 30px;
     color: var(--dark-blue);
     font-size: var(--font-normal);
-    background-color: var(--medium-blue);
     font-family: var(--font-family);
+    background-color: var(--medium-blue);
     border-radius: var(--border-radius-small);
 }
 
-.hidden {
+.option-button:hover {
+    cursor: pointer;
+    background-color: var(--light-blue);
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.hidden,
+.hidden:hover {
     border: 0;
+    cursor: default;
     color: var(--dark-blue);
     background-color: var(--dark-blue);
 }
