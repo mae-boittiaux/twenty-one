@@ -7,6 +7,9 @@ const optionThree = document.getElementById('option-three');
 const optionButtons = document.querySelectorAll('.option-button');
 
 let total = 0;
+let choiceComputer = 0;
+
+const waitTime = 2000;
 
 const outputUser = 'user-output';
 const outputComputer = 'computer-output';
@@ -19,12 +22,11 @@ optionButtons.forEach(button => {
         playTurn(outputUser, choiceUser);
         determineResult(choiceUser, true);
 
-        const choiceComputer = calculateChoice(getRandomInteger(1, 4));
-        playTurn(outputComputer, choiceComputer);
-        determineResult(choiceComputer, false);
+        choiceComputer = calculateChoice(getRandomInteger(1, 4));
 
-        setOptionButtonText();
-        determineButtonVisibility();
+        setTimeout(playComputerTurn, waitTime);
+        setTimeout(setOptionButtonText, waitTime);
+        setTimeout(determineButtonVisibility, waitTime);
     };
 });
 
@@ -46,6 +48,11 @@ function createDiv(className, textContent) {
 function playTurn(playerOutput, playerChoice) {
     const div = createDiv(playerOutput, playerChoice);
     output.append(div);
+}
+
+function playComputerTurn() {
+    playTurn(outputComputer, choiceComputer);
+    determineResult(choiceComputer, false);
 }
 
 function calculateChoice(playerChoice) {
