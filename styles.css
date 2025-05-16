@@ -57,13 +57,19 @@ body {
     border-radius: var(--border-radius);
 }
 
+.option-buttons {
+    position: fixed;
+    margin-top: 460px;
+    margin-left: 130px;
+}
+
 .option-button {
     border: 0;
     width: 30px;
     height: 30px;
     color: var(--dark-blue);
     font-size: var(--font-normal);
-    background-color: var(--white);
+    background-color: var(--medium-blue);
     font-family: var(--font-family);
     border-radius: var(--border-radius-small);
 }
